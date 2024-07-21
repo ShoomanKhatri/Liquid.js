@@ -1,0 +1,29 @@
+{% schema %}
+{
+  "name": "Spacer Section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "spacer_height",
+      "label": "Spacer Height (px)",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spacer",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .spacer {
+    height: {{ section.settings.spacer_height }}px;
+    background-color: white;
+    border-top: 20px solid white;
+  }
+</style>
+
+<section class="spacer"></section>
